@@ -8,7 +8,7 @@ from sqlalchemy.dialects.postgresql import JSON
 from datetime import datetime
 
 PGUSER = "postgres"
-PGPASSWORD = "1009"
+PGPASSWORD = "your_password"
 
 engine = create_engine(f"postgresql+psycopg2://{PGUSER}:{PGPASSWORD}@localhost:5432/Online-Coffee-Shop", echo=True)
 Session = sessionmaker(bind=engine)
