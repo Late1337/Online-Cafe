@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block title %}
+Керування меню
+{% endblock %}
+
+{% block content %}
+<h2>Усі позиції меню</h2>
+<table class="table">
+    <tr>
+        <th>Назва</th>
+        <th>Статус</th>
+        <th>Дія</th>
+    </tr>
+    {% for position in positions %}
+    <tr>
+        <td>{{ position.name }}</td>
+        <td>{{ 'Активна' if position.active else 'Неактивна' }}</td>
+        <td>
+            <a href="{{ url_for('toggle_item', item_id=position.id) }}">
+                {% if position.active %}
+                    Деактивувати
+                {% else %}
+                    Активувати
+                {% endif %}
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<div class="position-details">
+    {% include '_navigation.html' %}
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash-messages">
+        <div class="alert">{{ messages[-1] }}</div>
+        </div>
+    {% endif %}
+    {% endwith %}
+
+        <img src="/static/menu/{{position.file_name}}">
+        <p>{{position.name}}  ({{position.weight}}гр)</p>
+        <small>{{position.ingredients}}</small>
+        <p>Опис:</p>
+        <pre>{{position.description}}</pre>
+        <p>{{position.price}} грн</p>
+        <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.name(value=position.name, type="hidden") }}
+        {{ form.num(label="Кількість") }}
+        {{ form.submit() }}
+    </form>
+</div>
+
+{% endblock %}

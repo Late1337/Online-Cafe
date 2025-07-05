@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+{%if basket%}
+        <ul>
+            {%for position in basket%}
+                <li>{{position}} , к-сть: {{basket[position]}}</li>
+            {%endfor%}
+        </ul>
+        <form method="post">
+            {{ form.hidden_tag() }}
+            {{ form.submit() }}
+
+        </form>
+    {%else%}
+        <h1>Ваш список замовлень пустий</h1>
+    {%endif%}
+{% endblock %}

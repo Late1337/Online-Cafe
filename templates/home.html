@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<main class="home-hero">
+<div class="section intro-section">
+    <img scr="">
+    <h4>Where Coffee Meets Passion</h4>
+    <h2>Welcome to Online Cafe</h2>
+</div>
+<div>
+    <ul class="features-section">
+        <li class="feature-block">
+            <img class="feature-img" src="../static/images/coffee1.jpg" alt="Coffee Image" sizes="488px" width="488" height="756">
+            <h4>Discover the World of Coffee</h4>
+            <h5>Delicious Artisan Coffee</h5>
+            <p>Welcome to Online Cafe, where the aroma of freshly brewed coffee fills the air, and each cup tells a story of passion and craftsmanship. Our commitment to excellence is evident in every sip, as we strive to bring you the finest coffee experience.
+Explore our diverse selection of handcrafted blends and single-origin beans, and indulge in the rich flavors that define truly great coffee. From the first pour to the last drop, savor the moment and elevate your coffee ritual with Online Cafe.</p>
+        </li>
+        <li>
+            <img src="../static/images/coffee2.jpg" alt="Coffee Making Image" sizes="488px">
+            <h4>Crafting Every Cup with Care</h4>
+            <h5>Experience Pour-over Magic</h5>
+            <p>At Online Cafe, we celebrate the art of pour-over coffee, where precision meets passion in every brewing process. Our dedication to quality and freshness ensures that each pour-over cup delivers an exceptional taste that captivates your senses.
+Discover the nuanced profiles and aromatic notes that unfold with every pour, as our baristas skillfully pour, bloom, and extract the essence of our meticulously sourced beans. Elevate your coffee journey and experience the magic of pour-over at Online Cafe.</p>
+            <button class="primary-button">Order Your Perfect Brew</button>
+        </li>
+        <li>
+            <img src="../static/images/coffee3.jpg" alt="Coffee Beans Image" sizes="488px">
+            <h4>Caring for Communities</h4>
+            <h5>Embracing Ethical Coffee Practices</h5>
+            <p>At Online Cafe, ethical coffee matters. We are dedicated to fostering sustainable relationships with coffee-growing communities and promoting fair trade practices. By prioritizing ethical sourcing and transparent partnerships, we aim to make a positive impact on the lives of farmers and the environment.
+With every sip of our ethically sourced coffee, you support a journey of care and responsibility. Join us in embracing the power of ethical coffee and experience the difference it makes in every cup.</p>
+        </li>
+    </ul>
+</div>
+<div>
+    <img src="../static/images/decorative_img.jpg" alt="Decorative Image">
+</div>
+<div>
+    <form>
+        <label for="email">Email*</label><br>
+        <input type="email" id="email" name="email">
+    </form>
+</div>
+{% endblock %}

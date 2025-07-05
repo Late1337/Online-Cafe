@@ -1,0 +1,348 @@
+/* === Загальні стилі === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("/static/images/decorative_img.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+button, .back-button, input[type="submit"] {
+    background-color: #6f4e37;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover, .back-button:hover, input[type="submit"]:hover {
+    background-color: #5c3e2b;
+}
+
+
+/* === Хедер === */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #6f4e37;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #6f4e37;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* === Основна частина === */
+.main-content {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.back-button {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* === Футер === */
+.main-footer {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.footer-nav a {
+    margin: 0 15px;
+    color: #6f4e37;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* === Головна сторінка === */
+.home-sections ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.home-sections li {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-sections h4, .home-sections h5, .home-sections p {
+    margin: 0.5rem 0;
+}
+
+
+/* === Форма логіну/реєстрації === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.alert {
+    max-width: 400px;
+    margin: 1rem auto;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* === Меню та позиції === */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu-item {
+    width: calc(33.333% - 2rem);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.menu-item button a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item button a:hover {
+    text-decoration: underline;
+}
+
+/* === Детальна сторінка позиції === */
+.position-details {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.position-details img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+}
+
+.position-details p, .position-details pre, .position-details small {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* === Таблиця керування меню === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255,255,255,0.95);
+    margin: 2rem 0;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+/* === Our Shops Section === */
+.shop-locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.shop {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.shop h3 {
+    margin-bottom: 1rem;
+    color: #6f4e37;
+}
+
+.shop p {
+    margin: 0.25rem 0;
+}
+
+/* === Замовлення === */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper ul {
+    padding-left: 1rem;
+}
+
+.content-wrapper li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.page-title {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #6f4e37;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        width: 100%;
+    }
+
+    .home-sections ul {
+        flex-direction: column;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .shop {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+    }
+}

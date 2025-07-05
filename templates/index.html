@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мій ресторан{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('/static/images/decorative_img.jpg'); background-size: cover; background-attachment: fixed; background-position: center;">
+    <div class="overlay">
+        <header class="main-header">
+            <div class="nav-container">
+                <div class="logo">☕ OnlineCafe</div>
+                <nav class="nav-links">
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('logout') }}">Вийти ({{ current_user.nickname }})</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}">Вхід</a>
+                    {% endif %}
+
+                    <a href="{{ url_for('basket') }}">Кошик</a>
+
+                    {% if current_user.is_authenticated and current_user.nickname == 'admin' %}
+                        <a href="{{ url_for('add_position') }}">Додати позицію</a>
+                        <a href="{{ url_for('manage_menu') }}">Керування меню</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            {% block content %}
+            {% endblock %}
+            <div class="back-button-container">
+                <a href="{{ url_for('home') }}" class="back-button">⬅ Повернутись до меню</a>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="{{ url_for('our_shops') }}">Наші заклади</a>
+                <a href="{{ url_for('menu') }}">Меню</a>
+                <a href="{{ url_for('my_orders') }}">Мої замовлення</a>
+            </nav>
+            <p class="footer-text">© 2025 OnlineCafe. Всі права захищено.</p>
+        </footer>
+    </div>
+</body>
+</html>

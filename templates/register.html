@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% set category, message = messages[0] %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endif %}
+{% endwith %}
+
+<div class="auth-container">
+    <h2>Реєстрація</h2>
+    <form action="/register" method="post" class="auth-form">
+        {{ form.hidden_tag() }}
+        <input type="text" name="nickname" placeholder="Nickname" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+{% endblock %}

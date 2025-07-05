@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+<nav>
+    <ul>
+        <li><a href="{{ url_for('add_position') }}">➕ Додати позицію</a></li>
+        <li><a href="{{ url_for('menu') }}">📋 Переглянути меню</a></li>
+        <li><a href="{{ url_for('home') }}">🏠 Головна</a></li>
+    </ul>
+</nav>
+<hr>
+{% endblock %}

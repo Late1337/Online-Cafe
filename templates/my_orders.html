@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block title %}
+Мої замовлення
+{% endblock %}
+
+{% block content %}
+<h2 class="page-title">Мої замовлення</h2>
+<div class="content-wrapper">
+    {% if orders %}
+    <ul>
+        {% for order in orders %}
+            <li>
+                <strong>Замовлення #{{ order.id }}</strong><br>
+                Час: {{ order.time }}<br>
+                Позиції:
+                <ul>
+                    {% for item in order["items"] %}
+                        <li>{{ item.name }} – {{ item.quantity }} шт.</li>
+                    {% endfor %}
+                </ul>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>У вас ще немає замовлень.</p>
+    {% endif %}
+</div>
+{% endblock %}
